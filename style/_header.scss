@@ -1,0 +1,42 @@
+.header {
+    align-items: center;
+    display: flex;
+    padding: 40px 80px;
+
+    @include desktop {
+        padding: 40px 0;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        width: 50px;
+
+        &:hover {
+            animation: spin 2s ease;
+        }
+    }
+
+    &__name {
+        padding-left: 10px;
+        @include text($color: $clear-blue, $weight: $semi-bold, $height: 1.5, $align: center);
+    }
+
+    &__nav {
+        display: none;
+
+        @include desktop {
+            display: flex;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include button($width: 180px);
+
+        @include desktop {
+            display: block;
+        }
+    }
+}

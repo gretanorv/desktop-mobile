@@ -1,0 +1,14 @@
+body {
+    background-image: url(../../../images/BackgroundDecorMobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: context-menu;
+    margin: 0 auto;
+
+    @include desktop {
+        background-image: url(../../../images/BackgroundDecor.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 1540px;
+    }
+}

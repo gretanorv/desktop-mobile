@@ -1,0 +1,29 @@
+@function rem-calc($size) {
+    $rem-size: $size / 16px;
+    @return #{$rem-size}rem;
+}
+
+@function translate-Y-down($position) {
+    $numericValue: 40px;
+    $pixelValue: $numericValue;
+    $res: $position * $pixelValue;
+    @return $res;
+}
+
+@mixin translate-gradually {
+    @for $var from 0 through 3 {
+        $child-no: $var + 1;
+        &:nth-of-type(#{$child-no}) {
+            transform: translateY(translate-Y-down($var));
+        }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1080deg);
+    }
+}

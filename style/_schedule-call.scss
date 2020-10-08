@@ -1,0 +1,56 @@
+.schedule-call {
+    background-color: $clear-blue;
+
+    @include desktop {
+        max-height: 450px;
+    }
+
+    &__content {
+        margin: 0 auto 111px;
+        max-width: 520px;
+
+        @include desktop {
+            display: flex;
+            max-width: 100%;
+        }
+    }
+
+    &__left {
+        @include desktop {
+            flex: 2;
+            margin-left: 160px;
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @include desktop {
+            display: inline;
+            flex: 1;
+        }
+    }
+
+    &__title {
+        @include main-title($color: $white, $transform: uppercase);
+        padding-top: 71px;
+
+        @include desktop {
+            padding-top: 91px;
+        }
+    }
+
+    &__break {
+        @include hr($light: true);
+    }
+
+    &__text {
+        @include text($color: $white);
+    }
+
+    &__btn {
+        @include button($light: true);
+        margin-top: 33px;
+        margin-bottom: 59px;
+    }
+}

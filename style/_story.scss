@@ -1,0 +1,54 @@
+.story {
+    margin: 0 auto 111px;
+    max-width: 520px;
+
+    @include desktop {
+        max-width: 1120px;
+        margin-top: 131px;
+    }
+
+    &__title {
+        @include main-title($transform: uppercase);
+    }
+
+    &__break {
+        @include hr;
+    }
+
+    &__content {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-texts {
+            margin-left: 20px;
+        }
+
+        &-paragraph {
+            display: flex;
+            margin-bottom: 43px;
+
+            @include desktop {
+                width: 45%;
+            }
+        }
+
+        &-img {
+            align-self: flex-start;
+        }
+
+        &-title {
+            @include sub-title($size: 20px, $color: $black-two, $height: 2);
+        }
+
+        &-text {
+            @include text($size: 16px, $color: $black, $height: 1.88);
+        }
+
+        &-space {
+            border: none;
+            height: 15px;
+        }
+    }
+}

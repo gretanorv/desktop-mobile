@@ -1,0 +1,70 @@
+@mixin main-title($size: 30px, $color: $dark-blue-grey, $weight: $normal, $height: 2, $spacing: 0, $transform: none) {
+    color: $color;
+    font-family: $Muli;
+    font-size: rem-calc($size);
+    font-weight: $weight;
+    line-height: $height;
+    text-align: left;
+    letter-spacing: $spacing;
+    text-transform: $transform;
+}
+
+@mixin text($size: 20px, $color: $dark-blue-grey, $weight: $normal, $transform: none, $align: unset, $height: 2) {
+    color: $color;
+    font-family: $Muli;
+    font-size: rem-calc($size);
+    font-weight: $weight;
+    line-height: $height;
+    text-transform: $transform;
+    text-align: $align;
+
+    &--bold {
+        font-weight: $bold;
+    }
+
+    &--underlined {
+        text-decoration: underline;
+    }
+}
+
+@mixin sub-title(
+    $size: 18px,
+    $weight: $semi-bold,
+    $color: $dark-blue-grey,
+    $height: 1.67,
+    $opacity: 1,
+    $transform: none
+) {
+    color: $color;
+    font-family: $Muli;
+    font-size: rem-calc($size);
+    font-weight: $weight;
+    line-height: $height;
+    opacity: $opacity;
+    text-transform: $transform;
+}
+
+@mixin link {
+    color: $black;
+    font-family: $Muli;
+    font-size: rem-calc(14px);
+    font-weight: $semi-bold;
+    line-height: 1.43;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+
+    &:hover,
+    &:focus {
+        color: $deep-sky-blue;
+    }
+}
+
+@mixin button-text($color: $white, $weight: $bold, $transform: none) {
+    color: $color;
+    font-family: $Muli;
+    font-size: rem-calc(14px);
+    font-weight: $weight;
+    line-height: 1.43;
+    text-align: center;
+    text-transform: $transform;
+}

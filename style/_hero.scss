@@ -1,0 +1,68 @@
+.hero {
+    @include desktop {
+        display: flex;
+        max-width: 1120px;
+        margin: 70px auto;
+        // margin: 70px 80px;
+    }
+
+    &__content {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-title {
+            padding: 45px 0 23px 80px;
+            @include main-title($size: 40px, $weight: $semi-bold, $height: 1.5, $spacing: 1px);
+
+            &--desktop {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                    margin: 45px 0 23px 0;
+                    padding: 0;
+                }
+            }
+
+            &--mobile {
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+
+        &-text {
+            padding: 0 0 33px 80px;
+            @include text;
+
+            @include desktop {
+                margin-bottom: 33px;
+                padding: 0;
+                width: 600px;
+            }
+        }
+
+        &-btn {
+            margin-bottom: 80px;
+            margin-left: 80px;
+            @include button;
+
+            @include desktop {
+                margin-left: 0;
+            }
+        }
+
+        &-img {
+            margin: 0 auto;
+            display: block;
+            padding: 0 20px;
+
+            @include desktop {
+                margin-top: 90px;
+                transform: translateX(-100px);
+            }
+        }
+    }
+}

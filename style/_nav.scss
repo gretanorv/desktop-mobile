@@ -1,0 +1,19 @@
+.nav {
+    display: none;
+
+    @include desktop() {
+        display: flex;
+        margin-left: auto;
+        margin-top: -30px;
+    }
+
+    &--footer {
+        display: flex;
+    }
+
+    &__item {
+        padding-right: 60px;
+
+        @include link;
+    }
+}

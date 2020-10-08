@@ -1,0 +1,46 @@
+@mixin button($light: false, $width: 300px) {
+    background-color: $clear-blue;
+    border: none;
+    box-shadow: 0 3px 25px -7px $clear-blue;
+    cursor: pointer;
+    height: 49px;
+    text-shadow: 0 10px 40px $clear-blue;
+    transition: all ease-in-out 0.3s;
+    width: $width;
+    @include button-text($transform: uppercase);
+
+    &:hover,
+    &:focus {
+        background-color: darken($clear-blue, 20%);
+    }
+
+    @if $light {
+        background-color: $white;
+        box-shadow: 0 3px 25px -7px $white-40;
+        @include button-text($transform: uppercase, $color: $clear-blue);
+
+        &:hover,
+        &:focus {
+            background-color: $sky-blue;
+        }
+    }
+}
+
+@mixin hr($light: false) {
+    border: none;
+    border-bottom: 2px solid $clear-blue;
+    box-shadow: 0 2px 0 0 $light-periwinkle;
+    margin-left: 0;
+    width: 80px;
+    margin-bottom: 48px;
+
+    @if $light {
+        border-bottom: 2px solid $white;
+        box-shadow: 0 2px 0 0 $sky-blue;
+    }
+
+    @include desktop {
+        margin-bottom: 38px;
+        transform: translateX(-40px);
+    }
+}

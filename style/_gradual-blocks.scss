@@ -1,0 +1,66 @@
+.gradual-blocks {
+    margin: 0 auto 111px;
+    max-width: 520px;
+
+    @include desktop {
+        max-width: 1120px;
+        margin-top: 131px;
+    }
+
+    &__title {
+        @include main-title($transform: uppercase);
+    }
+
+    &__break {
+        @include hr;
+    }
+
+    &__cards-container {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__box {
+        background-color: $white;
+        box-shadow: 0 20px 60px 0 $light-royal-blue-10;
+        display: flex;
+        position: relative;
+
+        @include desktop {
+            min-width: 320px;
+            margin-bottom: 111px;
+
+            @include translate-gradually;
+        }
+
+        &-left {
+            padding: 43px 40px 35px;
+
+            @include desktop {
+                padding-right: 0;
+            }
+
+            &-step {
+                @include text($size: 12px, $weight: bold, $transform: uppercase, $height: 1.67);
+            }
+
+            &-name {
+                @include sub-title($weight: bold, $color: $deep-sky-blue, $height: 2.22, $transform: uppercase);
+            }
+
+            &-description {
+                @include text($size: 16px, $height: 1.88);
+
+                padding-bottom: 8px;
+            }
+        }
+
+        &-corner {
+            bottom: -5px;
+            right: -5px;
+            position: absolute;
+        }
+    }
+}

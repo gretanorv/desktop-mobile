@@ -1,0 +1,30 @@
+.how-it-works {
+    &__card-connector {
+        height: 40px;
+        margin-left: 60px;
+        transform: translateY(4px);
+
+        @include desktop {
+            display: none;
+        }
+
+        &--desktop {
+            display: none;
+
+            @include desktop {
+                align-self: flex-start;
+                display: inline;
+                margin-top: 62px;
+                @include translate-gradually;
+            }
+        }
+    }
+
+    &__box-icon {
+        align-self: flex-start;
+        cursor: pointer;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+}

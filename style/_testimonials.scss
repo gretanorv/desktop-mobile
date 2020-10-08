@@ -1,0 +1,51 @@
+.testimonials {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 540px;
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+
+    &__card {
+        background-color: $white;
+        margin-top: 50px;
+        padding: 40px;
+
+        @include desktop {
+            margin: 0;
+        }
+
+        &-top {
+            align-items: center;
+            display: flex;
+
+            &-center {
+                margin-left: 20px;
+            }
+
+            &-name {
+                @include sub-title;
+            }
+
+            &-ocupation {
+                @include sub-title($size: 14px, $color: $deep-sky-blue, $height: 2.14);
+            }
+
+            &-quote {
+                margin-left: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        &-text {
+            @include text($size: 16px, $height: 1.88);
+
+            margin-top: 45px;
+        }
+    }
+}

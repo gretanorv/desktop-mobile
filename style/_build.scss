@@ -1,0 +1,41 @@
+.build {
+    margin: 0 auto 20px;
+    max-width: 520px;
+
+    @include desktop {
+        margin-bottom: 120px;
+        max-width: 1120px;
+    }
+
+    &__title {
+        @include main-title($transform: uppercase);
+    }
+
+    &__break {
+        @include hr;
+    }
+
+    &__cards-container {
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__card {
+        align-items: center;
+        box-shadow: 0 20px 60px 0 $light-royal-blue-10;
+        display: flex;
+        margin-bottom: 40px;
+
+        @include desktop {
+            width: 540px;
+        }
+
+        &-title {
+            @include sub-title($color: $black, $height: 2.22);
+            padding-left: 20px;
+        }
+    }
+}

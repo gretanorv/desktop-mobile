@@ -1,0 +1,65 @@
+.use-cases {
+    margin: 0 auto 131px;
+    max-width: 540px;
+
+    @include desktop {
+        max-width: 1140px;
+    }
+
+    &__title {
+        @include main-title($transform: uppercase);
+
+        @include desktop {
+            display: none;
+        }
+
+        &--desktop {
+            display: none;
+
+            @include desktop {
+                display: inline;
+            }
+        }
+    }
+
+    &__break {
+        @include hr;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__card {
+        background-color: $white;
+        box-shadow: 0 20px 60px 0 $light-royal-blue-10;
+        margin-bottom: 20px;
+        max-width: 250px;
+
+        @include desktop {
+            margin-right: 0;
+            max-width: 360px;
+
+            &:nth-child(n) {
+                margin-right: 20px;
+            }
+        }
+
+        &:nth-child(2n + 1) {
+            margin-right: 20px;
+        }
+
+        &-title {
+            @include sub-title($size: 20px, $weight: $bold, $color: $deep-sky-blue, $height: 2, $transform: uppercase);
+            margin-top: 28px;
+            margin-left: 20px;
+        }
+
+        &-text {
+            @include text($size: 16px, $height: 1.88);
+            padding: 17px 20px 15px;
+        }
+    }
+}

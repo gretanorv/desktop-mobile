@@ -1,0 +1,36 @@
+.features {
+    &__box {
+        flex-direction: column;
+
+        @include desktop {
+            width: 320px;
+        }
+
+        &-top {
+            align-items: center;
+            background-color: $ice-blue;
+            display: flex;
+
+            &-title {
+                @include sub-title($size: 20px, $height: 2);
+                margin-left: 20px;
+            }
+
+            &-img {
+                width: 80px;
+
+                @include desktop {
+                    width: 120px;
+                }
+            }
+        }
+
+        &-bottom {
+            padding: 35px 40px 25px;
+        }
+
+        &-description {
+            @include text($size: 16px, $height: 1.88);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.message-mobile {
+    background-image: url(../../../images/PleaseVisitDesktopSiteSectionBackground.png);
+
+    &__text {
+        padding: 38px 60px 70px;
+        @include text($color: $white, $weight: $bold, $transform: uppercase, $align: center);
+
+        @include desktop {
+            display: none;
+        }
+    }
+}
